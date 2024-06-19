@@ -23,11 +23,7 @@ recognition.onresult = function(event) {
   console.log(event);
   let current = event.resultIndex;
   let transcript = event.results[current][0].transcript;
-  if (transcript) {
-    p.innerHTML = transcript;
-  } else {
-    p.innerHTML = "No transcript available.";
-  }
+  p.innerHTML = transcript;
 };
 
 // Event handler for when speech recognition ends
